@@ -16,7 +16,11 @@ def calculadora():
     
     valor1 = int(input(f'Qual será o primeiro valor da {dic[expressao]}: '))
     valor2 = int(input(
-        f'Qual será o segundo valor da {dic[expressao]} entre {valor1}{expressao}__'))
+        f'Qual será o segundo valor da {dic[expressao]} entre {valor1}{expressao}__: '))
+    
+    if dic[expressao] == 'Divisão' and valor2 == 0:
+        print('Não é possível dividir por zero!')
+        return
     
     expressao_completa = f'{valor1} {expressao} {valor2}'
     resultado = eval(expressao_completa)
