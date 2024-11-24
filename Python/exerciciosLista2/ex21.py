@@ -1,4 +1,4 @@
-lista = [40, 20, 30, 20, 20, 20, 50, 60, 10, 50, 50, 10]
+lista = [40, 20, 30, 20, 20, 20, 50, 60, 10, 50, 50, 10] # lista original
 
 def list_corret(lista):
     nova_lista = list(set(lista))

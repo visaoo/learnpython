@@ -2,7 +2,7 @@ def removerDuplicados(lista_aninhada):
     lista_nova = []
     for sublista in lista_aninhada:
         # transformando em arr e removedo as duplicatas
-        sublistaUn_ = list(set(sublista)) 
+        sublistaUn_ = list(set(sublista))
         lista_nova.append(sublistaUn_)
         # print(list(lista_nova))  # list transforma o obj in arr
     return lista_nova

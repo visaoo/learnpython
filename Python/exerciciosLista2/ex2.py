@@ -1,4 +1,4 @@
-def par_or_impar(v):
+def par_or_impar(v): # função que verifica se o número é par ou impar
     if v % 2 == 0:
         return f'{v} é Par'
     else:
