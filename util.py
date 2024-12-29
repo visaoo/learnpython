@@ -1,3 +1,4 @@
+from random import randint
 def validar_email(email):
     if "@" in email and "." in email.split("@")[1]:
         return True
@@ -11,3 +12,17 @@ def solicitar_email():
             return email
         else:
             print("Email inválido. Por favor, tente novamente.")
+
+def gen_matricula(inicial, mid, final, letter):
+    matricula = ''
+    for _ in range(inicial):
+        matricula += str(randint(0, inicial))
+    matricula += '-'
+    for _ in range(mid):
+        matricula += str(randint(0, mid))
+    matricula += '-'
+    for _ in range(final):
+        matricula += str(randint(0, final))
+    matricula += f'/{letter}'
+
+    return matricula
