@@ -1,27 +1,15 @@
-alunos = [
-    {
-        "nome": 'Bruno', "matricula": "999-67890-20/A",
-        "about": {
-            "nascimento": "",
-            "sexo": "Masculino",
-            "endereco": "",
-            "telefone": "",
-            "email": "@gmail",
-        }
-    }
-]
+from Cadastro import aluno, disciplina, professor, turma
+from Consulta.consultas import *
 
-professores = [
-    {
-        "nome": 'Leticia', "matricula": "12345-123-12/P", "disciplina": [],
-        "about": {
-                "nascimento": "",
-                "sexo": "Masculino",
-                "endereco": "",
-                "telefone": "",
-                "email": "@gmail",  # colocar uma verificação se é ou não email
-        }
-    }
-]
+turmax = turma.cadastrar_turma('avc', '1234')
+alunosx = turma.add_aluno(turmax, {
+        'nome': 'fillype',
+        'matricula': 'matricula', # gen_matricula(3, 5, 2, "A")
+        'data_nascimento': 'data_nascimento',
+        'sexo': 'sexo',
+        'endereco': 'endereco',
+        'telefone': 'telefone',
+        'email': 'email' # solicitar_email()
+    })
 
-
+print(consultar_alunos_em_turma(turmax))
